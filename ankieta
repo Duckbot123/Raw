@@ -1,0 +1,110 @@
+{
+  "name": "Ankieta",
+  "permissions": "NONE",
+  "permissions2": "NONE",
+  "restriction": "1",
+  "_id": "WIoya",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "ADMINISTRATOR",
+      "branch": {
+        "iftrue": "3",
+        "iffalse": "0",
+        "iftrueVal": "2"
+      },
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Bład nie możesz używać tej komendy!",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Nowa ankieta!",
+          "url": "",
+          "color": "GREEN",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "**Treść:**",
+              "value": "***${slashParams(\"Treść\")}***",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "Kaczkajta",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Kaczkajta",
+      "emoji": "4",
+      "varName2": "👍",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "Kaczkajta",
+      "emoji": "4",
+      "varName2": "👎",
+      "varName3": "",
+      "name": "Add Reaction"
+    }
+  ],
+  "comType": "4",
+  "description": "Zadawaj pytania",
+  "parameters": [
+    {
+      "name": "Treść",
+      "description": "treść ankiety",
+      "type": "STRING",
+      "required": true,
+      "choices": null
+    }
+  ]
+}
